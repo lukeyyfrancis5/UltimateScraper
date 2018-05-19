@@ -13,6 +13,14 @@ namespace CryptoDataWebScraper
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
+
+            routes.MapRoute(
+                name: "ViewSnapRoute",
+                url: "ViewSnap/{id}",
+                defaults: new { controller = "Home", action = "ViewSnap", id = UrlParameter.Optional}
+            );
+
+
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",

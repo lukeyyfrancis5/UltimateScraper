@@ -1,0 +1,22 @@
+﻿@{
+    ViewBag.Title = "ViewSnaps";
+}
+@using CryptoDataWebScraper.Models
+@model List<CryptoDataWebScraper.Models.Ledger>
+
+
+<h3>@ViewBag.Message</h3>
+
+<p>SnapShotDisplay</p>
+
+@{
+    foreach (var ledger in Model)
+    {
+        <tr>
+            <td>@ledger.Time</td>
+            <td>@ledger.LedgerId</td>
+            @*<td></td>*@
+            <td> <a href="/home/viewsnap/@ledger.LedgerId">See Your Snap !</a></td>
+        </tr>
+    }
+}
