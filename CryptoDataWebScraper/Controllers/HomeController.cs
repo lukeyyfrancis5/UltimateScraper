@@ -28,19 +28,19 @@ namespace CryptoDataWebScraper.Controllers
         {
             ViewBag.Message = "See your snaps record here !";
 
-            var ledgers = _context.Ledgers.Include(l => l.CryptoCoins).ToList();
+            var ledgers = _context.Ledgers.ToList();
             return View(ledgers);
         }       
 
         public ActionResult ViewSnap(int id)
         {
-            var ledgers = _context.Ledgers.FirstOrDefault(l => l.LedgerId == id);
+            var ledgers = _context.Ledgers.Include(l => l.CryptoCoins).FirstOrDefault(l => l.LedgerId == id);
 
             if (ledgers == null)
                 return HttpNotFound();
 
             return View(ledgers);
-        }
+        }   
 
         public ActionResult CryptoData()
         {

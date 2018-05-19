@@ -13,6 +13,10 @@ namespace CryptoDataWebScraper.Models
         public string Name { get; set; }
         public double Price { get; set; }
 
+        public Coin()
+        {
+        }
+
 
         public Coin(string symbol, string name, string price)
         {

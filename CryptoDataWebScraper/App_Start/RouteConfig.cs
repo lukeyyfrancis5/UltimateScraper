@@ -17,7 +17,7 @@ namespace CryptoDataWebScraper
             routes.MapRoute(
                 name: "ViewSnapRoute",
                 url: "ViewSnap/{id}",
-                defaults: new { controller = "Home", action = "ViewSnap", id = UrlParameter.Optional}
+                defaults: new { controller = "Home", action = "ViewSnap" }
             );
 
 

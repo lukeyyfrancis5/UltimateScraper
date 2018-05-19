@@ -1,4 +1,5 @@
-﻿@model CryptoDataWebScraper.Models.Ledger
+﻿@using CryptoDataWebScraper.Models
+@model CryptoDataWebScraper.Models.Ledger
 
 @{
     ViewBag.Title = "ViewSnaps";
@@ -7,12 +8,52 @@
 
 <h2>Snap Table</h2>
 
+
+
+
+
+
+
+
+
 <div>
-    <table>
+    <h4>CoinTable</h4>
+    <hr />
+    <table class="table table-bordered table-hover">
+        <thead>
 
-        <dt>SnapTime</dt>
-        <dd>@Model.Time</dd>
-        <dt>@Model.CryptoCoins</dt>
+            <dt>SnapTime</dt>
+            <dd>@Html.DisplayFor(m => m.Time)</dd>
+            <tr>
+                <td>Symbol</td>
+                <td>Name</td>
+                <td>Price</td>
+            </tr>
+            @foreach (var coin in @Model.CryptoCoins)
+    {
+        <tr>
+            <td>@coin.Symbol</td>
+            <td>@coin.Name</td>
+            <td>@coin.Price</td>
+        </tr>
+}
 
+<td></td>
+
+        </thead>
     </table>
+
 </div>
+
+
+
+@*<div>
+        <table>
+
+            <dt>SnapTime</dt>
+            <dt>@Html.DisplayFor(m => m.LedgerId)</dt>
+            <dd>@Html.DisplayFor(m => m.Time)</dd>
+            <dt>@Html.DisplayFor(m => m.CryptoCoins)</dt>
+
+        </table>
+    </div>*@
