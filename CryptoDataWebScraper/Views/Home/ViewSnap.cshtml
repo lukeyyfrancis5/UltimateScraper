@@ -8,14 +8,6 @@
 
 <h2>Snap Table</h2>
 
-
-
-
-
-
-
-
-
 <div>
     <h4>CoinTable</h4>
     <hr />
@@ -30,16 +22,13 @@
                 <td>Price</td>
             </tr>
             @foreach (var coin in @Model.CryptoCoins)
-    {
-        <tr>
-            <td>@coin.Symbol</td>
-            <td>@coin.Name</td>
-            <td>@coin.Price</td>
-        </tr>
-}
-
-<td></td>
-
+            {
+                <tr>
+                    <td>@coin.Symbol</td>
+                    <td>@coin.Name</td>
+                    <td>@coin.Price</td>
+                </tr>
+            }
         </thead>
     </table>
 

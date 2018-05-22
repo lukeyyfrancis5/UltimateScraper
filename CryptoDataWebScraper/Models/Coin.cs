@@ -14,7 +14,7 @@ namespace CryptoDataWebScraper.Models
         public double Price { get; set; }
 
         public Coin()
-        {
+        {   
         }
 
 
