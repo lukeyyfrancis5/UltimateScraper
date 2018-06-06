@@ -26,7 +26,7 @@ namespace CryptoDataWebScraper.Controllers
 
         public ActionResult ViewSnaps()
         {
-            ViewBag.Message = "See your snaps record here !";
+            ViewBag.Message = "Checkout your snap records !";
 
             var ledgers = _context.Ledgers.ToList();
             return View(ledgers);
@@ -73,6 +73,7 @@ namespace CryptoDataWebScraper.Controllers
                 }
 
                 //Creates a date.time snapshot-this will be my future snapshot button
+
 
                 var ledger = new Ledger
                 {

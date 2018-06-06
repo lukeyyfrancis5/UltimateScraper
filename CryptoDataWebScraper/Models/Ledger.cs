@@ -14,6 +14,6 @@ namespace CryptoDataWebScraper.Models
 
         public Ledger()
         {
-        }       
+        }
     }
 }
