@@ -5,7 +5,7 @@
 @model List<CryptoDataWebScraper.Models.Ledger>
 
 
-<h3>@ViewBag.Message</h3>
+
 
 <p>SnapShotDisplay</p>
 
@@ -15,7 +15,7 @@
         <tr>
             <td>@ledger.Time</td>
             <td>@ledger.LedgerId</td>
-            <td> <a href="/home/ViewSnap/@ledger.LedgerId">See Your Snap !</a></td>
+            <td> <a href="/ViewSnap/@ledger.LedgerId">See Your Snap !</a></td>
         </tr>
     }
 }

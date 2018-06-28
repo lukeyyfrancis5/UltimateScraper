@@ -17,32 +17,29 @@
             <dt>SnapTime</dt>
             <dd>@Html.DisplayFor(m => m.Time)</dd>
             <tr>
+                <td>Position</td>
                 <td>Symbol</td>
                 <td>Name</td>
+                <td>24hr Change</td>
                 <td>Price</td>
+
+
             </tr>
             @foreach (var coin in @Model.CryptoCoins)
             {
-                <tr>
-                    <td>@coin.Symbol</td>
-                    <td>@coin.Name</td>
-                    <td>@coin.Price</td>
-                </tr>
+            <tr>
+                <td>@coin.Position</td>
+                <td>@coin.Symbol</td>
+                <td>@coin.Name</td>
+                <td>@coin.Change</td>
+                <td>@coin.Price</td>
+
+
+            </tr>
             }
         </thead>
     </table>
-
 </div>
 
 
 
-@*<div>
-        <table>
-
-            <dt>SnapTime</dt>
-            <dt>@Html.DisplayFor(m => m.LedgerId)</dt>
-            <dd>@Html.DisplayFor(m => m.Time)</dd>
-            <dt>@Html.DisplayFor(m => m.CryptoCoins)</dt>
-
-        </table>
-    </div>*@

@@ -10,5 +10,7 @@ namespace CryptoDataWebScraper.Models
     {
         public DbSet<Coin> Coins { get; set; }
         public DbSet<Ledger> Ledgers { get; set; }
+        public DbSet<Stock> Stocks { get; set; }
+        public DbSet<SelenLedger> SelenLedgers { get; set; }
     }
 }

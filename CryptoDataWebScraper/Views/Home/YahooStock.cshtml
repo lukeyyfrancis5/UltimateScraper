@@ -1,0 +1,43 @@
+﻿@model System.Collections.Generic.List<CryptoDataWebScraper.Models.Stock>
+
+@{
+    ViewBag.Title = "YahooStock";
+
+}
+
+<p><a href="http://localhost:56701/Home/ViewStockSnaps" class="btn btn-primary btn-lg">View &raquo;</a></p>
+
+<h2>ViewBag.Title</h2>
+<h3>ViewBag.Message</h3>
+<div>
+    <h4>Stock Table</h4>
+    
+    <table class="table table-bordered table-hover">
+        <thead>
+            <tr>
+                <td>Symbol</td>
+                <td>Name</td>
+                <td>Last Price</td>
+                <td>Change</td>
+                <td>Percent Change</td>
+            </tr>
+            @foreach (var stock in Model)
+            {
+                <tr>
+                    <td>@stock.Symbol</td>
+                    <td>@stock.Name</td>
+                    <td>@stock.LastPrice</td>
+                    <td>@stock.Change</td>
+                    <td>@stock.PercentChange</td>
+                </tr>
+            }
+
+        </thead>
+    </table>
+
+</div>
+
+
+<div>
+    <strong>Stock Snapshot Time:</strong> @ViewBag.Time<br />
+</div>

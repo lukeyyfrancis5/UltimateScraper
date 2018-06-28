@@ -2,8 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.Web.DynamicData;
 using System.Web.Mvc;
 using System.Web.Routing;
+using CryptoDataWebScraper.Controllers;
 
 namespace CryptoDataWebScraper
 {
@@ -13,11 +15,11 @@ namespace CryptoDataWebScraper
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
-
             routes.MapRoute(
-                name: "ViewSnapRoute",
-                url: "ViewSnap/{id}",
-                defaults: new { controller = "Home", action = "ViewSnap" }
+                name: "ViewAllSnapRoute",
+                url: "{action}/{id}",
+                defaults: new { controller  = "Home" },
+                constraints: new { action = "ViewStockSnap|ViewSnap" }
             );
 
 

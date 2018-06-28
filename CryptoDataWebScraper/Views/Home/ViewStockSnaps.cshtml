@@ -1,0 +1,21 @@
+﻿@{
+    ViewBag.Title = "ViewStockSnaps";
+}
+
+@using CryptoDataWebScraper.Models
+@model System.Collections.Generic.List<CryptoDataWebScraper.Models.SelenLedger>
+
+    
+<p>Stock Snapshot Display</p>
+
+
+@{
+    foreach (var sLedger in Model)
+    {
+        <tr>
+            <td>@sLedger.STime</td>
+            <td>@sLedger.SLId</td>
+            <td> <a href="/ViewStockSnap/@sLedger.SLId">See your StockSnap !</a></td>
+        </tr>
+    }
+}

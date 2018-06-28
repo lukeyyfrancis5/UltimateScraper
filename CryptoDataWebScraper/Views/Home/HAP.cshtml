@@ -4,32 +4,22 @@
 <h2>@ViewBag.Title.</h2>
 <h3>@ViewBag.Message</h3>
 
-
-<p><a href="http://localhost:56701/Home/ViewSnaps" class="btn btn-primary btn-lg">View &raquo;</a></p>
 <div>
     <h4>CoinTable</h4>
     <hr />
     <table class="table table-bordered table-hover">
         <thead>
-            <tr>
-                <td>Position</td>
-                <td>Symbol</td>
-                <td>Name</td>
-                <td>24hr Change</td>
-                <td>Price</td>
-
-
-            </tr>
+        <tr>
+            <td>Symbol</td>
+            <td>Name</td>
+            <td>Price</td>
+        </tr>
         @foreach (var coin in Model)
         {
             <tr>
-                <td>@coin.Position</td>
                 <td>@coin.Symbol</td>
                 <td>@coin.Name</td>
-                <td>@coin.Change</td>
                 <td>@coin.Price</td>
-
-
             </tr>
         }
 

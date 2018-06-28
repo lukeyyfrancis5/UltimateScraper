@@ -1,0 +1,40 @@
+﻿@using CryptoDataWebScraper.Models
+@model CryptoDataWebScraper.Models.SelenLedger
+
+@{
+    ViewBag.Title = "ViewStockSnaps";
+}
+
+<h2>StockSnap</h2>
+
+<div>
+    <h4>StockTable</h4>
+    <hr />
+    <table class="table table-bordered table-hover">
+        <thead>
+          
+        
+
+        <dt>SnapTime</dt>
+        <dd>@Html.DisplayFor(m => m.STime)</dd>
+        <tr>
+            <td>Symbol</td>
+            <td>Name</td>
+            <td>LastPrice</td>
+            <td>Change</td>
+            <td>PercentChange</td>
+        </tr>
+        @foreach (var stock in @Model.StocksL)
+        {
+            <tr>
+                <td>@stock.Symbol</td>
+                <td>@stock.Name</td>
+                <td>@stock.LastPrice</td>
+                <td>@stock.Change</td>
+                <td>@stock.PercentChange</td>
+            </tr>
+        }
+        </thead>
+    </table>
+</div>
+
